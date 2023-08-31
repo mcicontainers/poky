@@ -23,6 +23,7 @@ do_install() {
 }
 
 USERADD_PACKAGES = "${PN}"
+GROUPADD_PARAM:${PN} = "--system nogroup"
 USERADD_PARAM:${PN} = "--system --home /dev/null \
                        --no-create-home --shell ${sbindir}/ppp-dialin \
                        --no-user-group --gid nogroup ppp"
